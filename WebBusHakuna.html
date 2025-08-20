@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bus Concierto Hakuna + Siempre Así — Viaje en bus</title>
+  <meta name="description" content="Nos vamos en bus al concierto de Hakuna + Siempre Así en Rivas (Madrid). PVP 55 €, ida y vuelta. Preinscripción abierta. No organizado oficialmente por Hakuna.">
+  <meta name="theme-color" content="#f1e4c6">
+  <link rel="icon" href="https://raw.githubusercontent.com/Fedes10/Hakuna-Web-F10/refs/heads/main/Imagenes/autobus.png" type="image/png">
+
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Concierto Hakuna + Siempre Así — Viaje en bus">
+  <meta property="og:description" content="PVP 55 €, ida y vuelta. 6 septiembre 2025 · Rivas (Madrid). ¡Apúntate!">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            crema: {
+              50: '#fffdf7',
+              100: '#fbf5df',
+              200: '#f6eccc',
+              300: '#f1e4c6'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- GSAP + ScrollTrigger (animaciones on-scroll) -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- SEO técnico con JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Concierto Hakuna + Siempre Así (viaje en bus)",
+    "startDate": "2025-09-06T16:00:00+02:00",
+    "endDate": "2025-09-07T00:30:00+02:00",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "location": {
+      "@type": "Place",
+      "name": "Rivas (Madrid)",
+      "address": "Rivas-Vaciamadrid, Madrid, España"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "55",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "url": "https://docs.google.com/forms/d/e/1FAIpQLSdWhpHyU9nUMgeXOhHtZL4BGt9y8i5bovJFpaaMw6hE4KWgig/viewform?usp=header"
+    },
+    "organizer": { "@type": "Organization", "name": "Grupo de amigos (no oficial)" }
+  }
+  </script>
+
+  <style>
+    /* Fondo crema con ligero degradado: */
+    body {
+      background:
+        radial-gradient(1200px 600px at 10% 0%, rgba(255,255,255,.95), rgba(248,240,220,.95) 40%, rgba(245,232,200,.95) 70%, rgba(238,223,188,.95)),
+        linear-gradient(180deg, #fffefb, #f6eccc);
+    }
+    /* Animaciones base (para fallback sin JS) */
+    .fade-up { opacity: 0; transform: translateY(20px); }
+    .reveal   { opacity: 1 !important; transform: translateY(0) !important; transition: opacity .6s ease, transform .6s ease; }
+  </style>
+</head>
+<body class="min-h-dvh text-neutral-900 antialiased selection:bg-amber-200/60 selection:text-black">
+  <main class="mx-auto max-w-screen-lg px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+    <!-- Cabecera -->
+    <header class="fade-up flex flex-col items-center text-center gap-3">
+      <div class="flex items-center gap-3 text-amber-700">
+        <!-- Cruz -->
+        <svg class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M10.5 2.5h3v6.9h7v3h-7v8.1h-3v-8.1h-7v-3h7V2.5z"></path>
+        </svg>
+        <span class="tracking-[0.2em] text-xs font-semibold uppercase">Adoración · Alegría · Camino</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight">
+        Concierto <span class="text-amber-700">Hakuna</span> + Siempre Así
+      </h1>
+      <p class="text-base sm:text-lg text-neutral-700">
+        🚌 Salimos en bus · Evento no organizado oficialmente por Hakuna
+      </p>
+    </header>
+
+    <!-- Hero / CTA -->
+    <section class="fade-up mt-8 sm:mt-12 grid md:grid-cols-[1.1fr,0.9fr] gap-6 items-center">
+      <!-- Texto principal -->
+      <div class="space-y-5">
+        <div class="rounded-2xl bg-white/70 shadow-sm ring-1 ring-black/5 p-5 backdrop-blur">
+          <h1 class="text-center" style="color: grey;"><strong>DESCRIPCION</strong></h1><br>
+          <ul class="text-sm sm:text-base leading-relaxed">
+            <li class="flex gap-3"><span class="shrink-0">📅</span> <span>6 <strong>septiembre 2025</strong> — <strong>Rivas (Madrid)</strong></span></li>
+            <li class="flex gap-3"><span class="shrink-0">🎟️</span> <span>Viaje <strong>ida y vuelta</strong> hasta el recinto del concierto.</span></li>
+            <li class="flex gap-3"><span class="shrink-0">💶</span> <span><strong>PVP: 55 €</strong> · <em>No incluye entrada al concierto</em></span></li>
+           <li class="flex gap-3 relative">
+          <span class="shrink-0">🏦</span> 
+          <span>Ingreso en cuenta: 
+            <code id="numeroCuenta" class="font-mono tracking-wide bg-gray-200/50 px-1 rounded-sm cursor-pointer">ES57 2100 8522 2002 0046 0732</code>
+            <span id="copiadoMsg" class="absolute left-full ml-2 top-0 text-green-600 text-sm opacity-0 transition-opacity duration-300">¡Copiado!</span>
+          </span>
+        </li>
+
+        <script>
+          const numero = document.getElementById('numeroCuenta');
+          const msg = document.getElementById('copiadoMsg');
+
+          numero.addEventListener('click', () => {
+            navigator.clipboard.writeText(numero.innerText);
+            msg.classList.remove('opacity-0');
+            setTimeout(() => msg.classList.add('opacity-0'), 1500);
+          });
+        </script>
+
+          </ul>
+        </div>
+        <div class="flex flex-wrap gap-3">
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSdWhpHyU9nUMgeXOhHtZL4BGt9y8i5bovJFpaaMw6hE4KWgig/viewform?usp=header"
+            target="_blank" rel="noopener noreferrer"
+            aria-label="Abrir formulario de preinscripción"
+            class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-amber-600 text-white font-semibold shadow hover:bg-amber-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+            Preinscribirme ahora
+          </a>
+          <a href="#recorrido"
+             class="inline-flex items-center justify-center px-5 py-3 rounded-2xl bg-white text-neutral-900 font-semibold shadow ring-1 ring-black/10 hover:bg-neutral-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500">
+            Ver recorrido
+          </a>
+        </div>
+
+        <p class="text-sm text-neutral-700">
+          ⚠️ <strong>Importante:</strong> Se debe cubrir el <strong>90%</strong> de las plazas del autobús. Si no se realiza, se devolverá el importe.
+        </p>
+
+        <div class="grid gap-3 sm:grid-cols-2">
+        <!-- 1º Preinscripción (verde claro con hover zoom) -->
+        <div class="rounded-xl bg-green-200 ring-1 ring-black/5 p-4"
+            style="transition: transform 0.3s ease, box-shadow 0.3s ease;"
+            onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 6px 16px rgba(0,0,0,0.2)'"
+            onmouseout="this.style.transform='none'; this.style.boxShadow='none'">
+          <p class="text-sm"> 📅 1º <strong>Fecha límite preinscripción:</strong> 27 de agosto</p>
+        </div>
+
+        <!-- 2º Pago (gris deshabilitado con rayado, sin hover) -->
+        <div class="rounded-xl ring-1 ring-black/5 p-4 opacity-70"
+            style="background: repeating-linear-gradient(45deg,#e5e7eb,#e5e7eb 10px,#d1d5db 10px,#d1d5db 20px); cursor:not-allowed;">
+          <p class="text-sm">🗓️ 2º <strong>Fecha límite pago:</strong> 31 de agosto</p>
+        </div>
+      </div>
+
+      </div>
+
+      <!-- Placeholder cartel/QR cuadrado -->
+      <div class="flex justify-center">
+        <figure class="w-full aspect-square max-w-sm rounded-3xl border-2 border-dashed border-amber-400/70 bg-amber-50/70 grid place-content-center text-center p-6 shadow-inner">
+          <img src="https://raw.githubusercontent.com/Fedes10/Hakuna-Web-F10/refs/heads/main/Imagenes/BanerBus.jpg" 
+         alt="Cartel Concierto Hakuna Bus"
+         class="w-full h-full object-cover rounded-2xl" />
+        </figure>
+      </div>
+    </section>
+
+    <!-- Recorrido -->
+    <section id="recorrido" class="fade-up mt-12">
+      <h2 class="text-2xl sm:text-3xl font-bold text-center mb-6">🗺️ Recorrido y paradas (orientativo) 🗺️</h2>
+      <ol class="relative border-s-2 border-amber-300 mx-auto max-w-2xl pl-6 space-y-5">
+        <!-- Item -->
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-emerald-300 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">07:30</p>
+            <p class="text-sm sm:text-base">Puerto de Santa María (estación tren)</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-yellow-200/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">08:00</p>
+            <p class="text-sm sm:text-base">Jerez de la Frontera (Carrefour Sur)</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-yellow-200/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">09:00</p>
+            <p class="text-sm sm:text-base">
+              <a class="underline decoration-amber-500 underline-offset-2" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/6LB4HGshqgg3Eddf7?g_st=aw">📌Sevilla · Mapa</a>
+            </p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-white/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">10:00</p>
+            <p class="text-sm sm:text-base">Parada desayuno</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-white/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">10:30</p>
+            <p class="text-sm sm:text-base">Seguimos viaje</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-yellow-200/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">11:00</p>
+            <p class="text-sm sm:text-base">
+              <a class="underline decoration-amber-500 underline-offset-2" target="_blank" rel="noopener noreferrer" href="https://maps.app.goo.gl/2hQtUUrZVmSA3Y6G9?g_st=aw">📌Córdoba · Mapa</a>
+            </p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-white/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">13:30</p>
+            <p class="text-sm sm:text-base">Parada almuerzo</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-white/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">14:30</p>
+            <p class="text-sm sm:text-base">Continuamos viaje</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-stone-300 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">16:00</p>
+            <p class="text-sm sm:text-base">Llegada a Rivas</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-white/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">00:30</p>
+            <p class="text-sm sm:text-base">Salida vuelta</p>
+          </div>
+        </li>
+        <li class="ms-4">
+          <div class="absolute -start-3.5 mt-1 w-3 h-3 rounded-full bg-amber-500 shadow" aria-hidden="true"></div>
+          <div class="rounded-xl bg-red-300/80 ring-1 ring-black/5 p-3 shadow-sm">
+            <p class="text-sm font-semibold text-amber-800">09:00</p>
+            <p class="text-sm sm:text-base">Llegada a Puerto de Santa María</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- CTA final -->
+    <section class="fade-up mt-12">
+      <div class="mx-auto max-w-2xl text-center rounded-3xl bg-gradient-to-br from-amber-200/70 to-amber-100/70 p-6 sm:p-8 ring-1 ring-black/5 shadow">
+        <p class="text-lg sm:text-xl font-semibold mb-3">¿Te apuntas al viaje?</p>
+        <p class="text-sm sm:text-base text-neutral-700 mb-5">Rellena la preinscripción y reserva tu plaza. ¡Nos vemos en Rivas!</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdWhpHyU9nUMgeXOhHtZL4BGt9y8i5bovJFpaaMw6hE4KWgig/viewform?usp=header"
+           target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center px-6 py-3 rounded-2xl bg-amber-700 text-white font-semibold shadow hover:bg-amber-800 focus-visible:ring-2 focus-visible:ring-amber-600">
+          Abrir formulario
+        </a>
+      </div>
+    </section>
+    <!-- Pie -->
+    <footer class="mt-10 sm:mt-14 text-center text-xs text-neutral-600">
+      <p style="font-size: 14px;">⚠️ No organizado oficialmente por Hakuna. Información sujeta a cambios.‼️</p>
+    </footer>
+  </main>
+
+  <!-- Animaciones GSAP / ScrollTrigger -->
+  <script>
+    (function () {
+      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('.fade-up');
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        sections.forEach(el => el.classList.add('reveal'));
+        return;
+      }
+
+      // Fallback reveal con IO:
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('reveal');
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -10% 0px', threshold: 0.1 });
+
+      sections.forEach(el => io.observe(el));
+
+      // Si GSAP está cargado, animación más fluida
+      window.addEventListener('load', () => {
+        if (window.gsap && window.ScrollTrigger) {
+          gsap.utils.toArray('.fade-up').forEach((el, i) => {
+            gsap.fromTo(el,
+              { opacity: 0, y: 24 },
+              {
+                opacity: 1, y: 0, duration: 0.6, delay: i * 0.05, ease: 'power3.out',
+                scrollTrigger: { trigger: el, start: 'top 80%', toggleActions: 'play none none none' }
+              }
+            );
+          });
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
